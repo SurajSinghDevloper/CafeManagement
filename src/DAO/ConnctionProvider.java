@@ -11,8 +11,8 @@ import java.sql.*;
 public class ConnctionProvider {
     public static Connection getCon(){
         try{
-            Class.forName("com.mysql.jdbc.Driver");
-//            Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/cms?useSSL=false","suraj","8988");
+            Class.forName("c");
+//            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/cms?useSSL=false","root","8988");
         Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/cms?useSSL=false","root","8988");  
             return con;
         }

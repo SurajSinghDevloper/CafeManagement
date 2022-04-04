@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package DAO;
+import java.awt.HeadlessException;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
@@ -16,10 +17,11 @@ public class DbOperations {
             Connection con= ConnctionProvider.getCon();
             System.out.println("Connection established");
             Statement st=con.createStatement();
+//            System.out.println("Connection established");
             st.executeUpdate(Query);
             if(!msg.equals(""))
                 JOptionPane.showMessageDialog(null, msg);
-        }catch(Exception e){
+        }catch(HeadlessException | SQLException e){
             JOptionPane.showMessageDialog(null,e,"Message",JOptionPane.ERROR_MESSAGE);
         }
     }
